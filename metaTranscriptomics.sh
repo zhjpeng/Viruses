@@ -30,7 +30,6 @@ T=26
 
 FLAG="[MetaTrans "$(date "+%Y-%m-%d %H:%M:%S")"] "
 
-:<<P
 if [[ ! -d ${TEMP} ]]; then
     echo -e ${FLAG} ${TEMP} "is not existing, create it now...\n"
     mkdir -p ${TEMP}
@@ -116,7 +115,6 @@ do
 
     echo -e ${FLAG} "Complete to assemble the reads of" ${K} "...\n"
 done
-P
 
 ############################ Viral Identification ######################
 
@@ -233,7 +231,6 @@ do
 done
 
 ############################ phylogenetic relationship ######################
-:<<T
 ## download the reference genome
 mkdir Amalgaviridae Articulavirales Astroviridae Birnaviridae Bunyavirales Cystoviridae Flaviviridae Hepe-Virga Hypoviridae Luteo-Sobemo Mono-Chu Narna-Levi Nidovirales Nodaviridae Partiti-Picobirna Picornavirales Potyviridae Reovirales Tolivirales Toti-Chryso
 
@@ -419,10 +416,3 @@ do
 
     cp ./genbank/viral/*/*fna.gz Toti-Chryso/ && rm -r ./genbank/
 done
-T
-
-## ORFs annotation
-
-## alpha diversity
-
-## host prection
